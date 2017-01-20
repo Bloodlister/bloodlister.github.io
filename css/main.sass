@@ -1,0 +1,169 @@
+@font-face
+	font-family: Header
+	src: url(../fonts/PixelArt.ttf)
+	
+@font-face
+	font-family: Text
+	src: url("../fonts/Bit.ttf")
+	
+@font-face
+	font-family: Span
+	src: url("../fonts/Golden Age nofill.ttf")
+	
+@keyframes fromRight
+	0%
+		right: -1000px
+		opacity: 0
+	80%
+		right: 50px
+		opacity: 1
+	100%
+		right: 0px
+		opacity: 1
+
+*
+	margin: 0
+	padding: 0
+	text-align: center
+	color: black
+	transition: all 0.5s
+	overflow-x: hidden
+	
+	&::-webkit-scrollbar
+		width: 15px
+	&::-webkit-scrollbar-track
+		background: rgba(0, 0, 0, 0)
+	&::-webkit-scrollbar-thumb
+		background: rgb(28, 28, 28)
+
+.veil
+	width: 100vw
+	height: 100vh
+	position: fixed
+	z-index: -10
+
+.section
+	display: block
+	min-height: 100vh
+	// background-color: rgb(79, 165, 255)
+	border-bottom: 1px solid red
+	
+nav
+	position: fixed
+	width: 100vw
+	font-family: Text
+	line-height: 40px
+	z-index: 10
+	
+	ul
+		list-style: none
+		display: flex
+		flex-direction: row
+	
+		li
+			flex-grow: 1
+			border-right: 1px solid black
+			height: 40px
+			background: rgb(26, 132, 230)
+			font-size: 30px
+			
+			&:hover
+				background-color: rgb(106, 181, 250)
+			
+		&:last-child
+			border-right: none
+			
+h1
+	margin: 0
+	font-family: Header
+	
+
+span
+	font-family: Text
+	font-weight: 600
+	a
+		transition: all 0s
+	
+.home
+	
+	.container
+		padding-top: 80px
+		padding-bottom: 30px
+		display: block
+		margin: 0 auto
+		min-height: 70px
+	
+	h3, h4
+		margin: 0 auto
+		font-family: Header
+		display: block
+		
+	h3
+		font-size: 30px
+		width: 600px
+	
+	h4
+		font-size: 20px
+		width: 500px
+		
+.infoContainer
+	padding: 25px
+	// 	background: rgb(79, 165, 255)
+	.infoParagraph
+		font-family: Text
+		font-size: 35px
+		display: block
+		margin: 15px auto
+		text-align: left
+		overflow: hidden
+		position: relative
+		animation: fromRight 0.75s ease 0s 1 alternate
+		
+		@media screen and (max-width: 850px)
+			text-align: center
+		
+	.face
+		display: block
+		float: left
+		margin: 15px 15px
+		margin-right: 55px
+		width: 24.5vw
+		min-width: 300px
+		height: 24.5vw
+		min-height: 300px
+		
+		border-radius: 50%
+		background: url("../images/face1.jpg")
+		background-size: cover
+		background-position: center
+		shape-outside: circle()
+		@media screen and (max-width: 850px)
+			float: none
+			margin: 0 auto
+		
+		&:hover
+			box-shadow: 0px 0px 20px black
+			transform: rotate(-10deg)
+		
+
+///////////////////////////
+//	QUERIES START HERES  //
+///////////////////////////
+
+@media screen and (max-width: 850px)
+	nav
+		display: block
+		position: relative
+		ul
+			display: flex
+			flex-direction: column
+			flex-grow: 0
+			
+	.container
+		h3
+			font-size: 25px
+			width: calc(100% - 25px)
+			
+		h4
+			font-size: 20px
+			width: calc(100% - 25px)
