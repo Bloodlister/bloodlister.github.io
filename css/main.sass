@@ -42,8 +42,6 @@
 .section
 	display: block
 	min-height: 100vh
-	// background-color: rgb(79, 165, 255)
-	border-bottom: 1px solid red
 	
 nav
 	position: fixed
@@ -160,20 +158,21 @@ h1
 	flex-direction: row
 	flex-wrap: wrap
 	justify-content: space-around
+	background: $foreground
 	
 	.project
-		height: 250px
-		width: 25vw
+		height: 350px
+		width: 40vw
 		min-width: 350px
 		margin: 20px
 		border: 1px solid black
-		border-radius: 7px 7px 0px 0px
-		@media screen and (max-width: 850px)
+		@media screen and (max-width: 1000px)
 			width: 80%
 		
 		.thumbnail
 			background: rgb(26, 200, 0)
 			background-size: cover
+			background-position: center
 			height: 70%
 			
 			&:hover
@@ -185,6 +184,7 @@ h1
 			justify-content: space-between
 			height: 30%
 			font-family: Text
+			background: rgb(227, 255, 254)
 			
 			h6
 				border-top: 1px solid black
@@ -192,6 +192,9 @@ h1
 				margin-bottom: 0
 				padding: 5px
 				font-size: 20px
+			
+			p
+				margin-top: 10px
 			
 		
 
