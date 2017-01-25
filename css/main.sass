@@ -73,15 +73,6 @@ nav
 h1
 	margin: 0
 	font-family: Header
-
-span
-	color: white
-	font-family: Text
-	text-decoration: underline
-	
-	a
-		color: white
-		transition: all 0s
 	
 .home
 	background: $background
@@ -129,6 +120,15 @@ span
 			padding: 20px 0
 			text-align: center
 			font-size: 25px
+			
+		span
+			color: white
+			font-family: Text
+			text-decoration: underline
+			
+			a
+				color: white
+				transition: all 0s
 		
 	.face
 		display: block
@@ -152,9 +152,58 @@ span
 			
 		
 		&:hover
-			box-shadow: 0px 0px 20px black
+			box-shadow: 0px 0px 50px #FFF
 			transform: rotate(-10deg)
+			
+.projects
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-around
+	
+	.project
+		height: 250px
+		width: 25vw
+		min-width: 350px
+		margin: 20px
+		border: 1px solid black
+		border-radius: 7px 7px 0px 0px
+		@media screen and (max-width: 850px)
+			width: 80%
 		
+		.thumbnail
+			background: rgb(26, 200, 0)
+			background-size: cover
+			height: 70%
+			
+			&:hover
+				box-shadow: inset 0px 0px 50px #000
+		
+		.description
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: 30%
+			font-family: Text
+			
+			h6
+				border-top: 1px solid black
+				margin: 10px
+				margin-bottom: 0
+				padding: 5px
+				font-size: 20px
+			
+		
+
+///////////////////////////
+//  PROJECT THUMBNAILS   //
+///////////////////////////
+
+#CodeBattles
+	background-image: url("../images/CodeBattles.png")
+	
+#Area51
+	background-image: url("../images/Area51.PNG")
 
 ///////////////////////////
 //	QUERIES START HERES  //

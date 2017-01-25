@@ -7,7 +7,7 @@ $(document).ready(function (){
 			
 			$("#toProjects").click(function (){
                 $('html, body').animate({
-                    scrollTop: $("#projects").offset().top
+                    scrollTop: $("#projects").offset().top - 40
                 }, 1000);
             });
 			
