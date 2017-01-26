@@ -99,19 +99,23 @@ h1
 			margin-top: 10px
 		
 .infoContainer
+	display: block
+	position: relative
+	border-top: 1px solid $foreground
+	border-bottom: 1px solid $foreground
+	background: $foreground
 	
 	.infoParagraph
-		color: white
+		animation: fromRight 0.75s ease 0s 1 alternate
+		color: $font-color
 		font-family: Text
 		font-size: 35px
 		display: block
-		margin: 15px auto
-		padding: 15px
+		margin: 0px auto
+		padding: 20px
 		text-align: left
 		overflow: hidden
 		position: relative
-		animation: fromRight 0.75s ease 0s 1 alternate
-		background: $foreground
 		
 		@media screen and (max-width: 850px)
 			width: 100%
@@ -120,7 +124,6 @@ h1
 			font-size: 25px
 			
 		span
-			color: white
 			font-family: Text
 			text-decoration: underline
 			
@@ -131,7 +134,7 @@ h1
 	.face
 		display: block
 		float: left
-		margin: 15px 15px
+		margin: auto 15px
 		margin-right: 55px
 		width: 24.5vw
 		min-width: 300px
@@ -148,17 +151,14 @@ h1
 			margin: 0 auto
 			margin-bottom: 20px
 			
-		
-		&:hover
-			box-shadow: 0px 0px 50px #FFF
-			transform: rotate(-10deg)
 			
 .projects
 	display: flex
 	flex-direction: row
 	flex-wrap: wrap
 	justify-content: space-around
-	background: $foreground
+	padding: 20px
+	min-height: 50vh
 	
 	.project
 		height: 350px
@@ -194,10 +194,34 @@ h1
 				font-size: 20px
 			
 			p
+				font-size: 23px
 				margin-top: 10px
 			
+.contacts
+	min-height: 30vh
+	background: $foreground
+	padding-top: 40px
+	
+	.panel
+		display: flex
+		flex-direction: column
+		margin: 0 auto
 		
-
+		.contact
+			display: flex
+			flex-direction: row
+			justify-content: center
+			height: 50px
+			
+			.icon
+				margin-right: 5px
+			
+			a, p
+				text-align: center
+				line-height: 50px
+				font-size: 40px
+				font-family: Text
+				text-decoration: none
 ///////////////////////////
 //  PROJECT THUMBNAILS   //
 ///////////////////////////
